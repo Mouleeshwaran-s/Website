@@ -1,0 +1,10 @@
+/* app.component.css or global styles */
+.navbar {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .navbar-hidden {
+    transform: translateY(-100%);
+    box-shadow: none; /* Optional: Remove shadow when hidden */
+  }
+  

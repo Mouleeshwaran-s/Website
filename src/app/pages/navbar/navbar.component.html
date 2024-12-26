@@ -1,0 +1,253 @@
+<div class="wrapper">
+    <div class="header">
+        <div class="marquee-text">
+            <div class="top-info-bar">
+                <div class="fl-1 info-text">
+                    <a>DUE TO LOCKDOWNS ACROSS THE COUNTRY, PLEASE EXPECT A DELAY IN PICKUP OR DELIVERY OF YOUR ORDERS. WE
+                        REGRET THE INCONVENIENCE CAUSED.</a>
+                </div>
+                <div class="fl-1 info-text">
+                    <a>GREAT VARIETY TO CHOOSE FROM AT GREAT PRICES</a>
+                </div>
+                <div class="fl-1 info-text">
+                    <a>RENOVATE YOUR HOME BY UPGRADING TO NEW DESIGNS</a>
+                </div>
+                <div class="fl-1 info-text">
+                    <a>DUE TO LOCKDOWNS ACROSS THE COUNTRY, PLEASE EXPECT A DELAY IN PICKUP OR DELIVERY OF YOUR ORDERS. WE
+                        REGRET THE INCONVENIENCE CAUSED.</a>
+                </div>
+                <div class="fl-1 info-text">
+                    <a>GREAT VARIETY TO CHOOSE FROM AT GREAT PRICES</a>
+                </div>
+                <div class="fl-1 info-text">
+                    <a>RENOVATE YOUR HOME BY UPGRADING TO NEW DESIGNS</a>
+                </div>
+                <div class="fl-1 info-text">
+                    <a>DUE TO LOCKDOWNS ACROSS THE COUNTRY, PLEASE EXPECT A DELAY IN PICKUP OR DELIVERY OF YOUR ORDERS. WE
+                        REGRET THE INCONVENIENCE CAUSED.</a>
+                </div>
+                <div class="fl-1 info-text">
+                    <a>GREAT VARIETY TO CHOOSE FROM AT GREAT PRICES</a>
+                </div>
+                <div class="fl-1 info-text">
+                    <a>RENOVATE YOUR HOME BY UPGRADING TO NEW DESIGNS</a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar n1 p-2">
+            <div class="container-fluid d-flex justify-content-between justify-content-lg-around">
+                <div class="d-flex left justify-content-center px-2">
+                    <div class="icon point px-1">
+                        <img src="./assets/search.svg" alt="Icon" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
+                    </div>
+                    <div class="navText point d-none d-lg-block px-1" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Search</div>
+                </div>
+                <img class="logo" src="./assets/logo.png" alt="" srcset="">
+                <div class="d-flex right justify-content-center">
+                    <div class="d-flex justify-content-evenly">
+                        <div class="icon px-1">
+                            <img class="pb-1" src="./assets/account.svg" alt="Account Icon">
+                        </div>
+                        <div class="navText d-none d-lg-block px-1">Account</div>
+                    </div>
+                    <div class="d-flex justify-content-evenly px-2">
+                        <div class="icon px-1">
+                            <img src="./assets/cart.svg" alt="Account Icon">
+                        </div>
+                        <div class="navText d-none d-lg-block px-1">Cart</div>
+                    </div>
+                    <button class="navbar-toggler custom-toggler d-block d-lg-none p-0 noBoder" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <div class="nav-link active" aria-current="page">Home</div>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="nav-link">Hair</div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <div class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Boby
+                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item">Hand</a></li>
+                                        <li><a class="dropdown-item">Hand</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item">Leg</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav [ngClass]="{'test': !mbNav, 'hide': mbNav}" class="navbar n2 p-2">
+            <div class="container-fluid d-flex justify-content-between justify-content-lg-around">
+                <div class="d-flex navleft justify-content-center px-2">
+                    <div class="icon point px-1">
+                        <img src="./assets/search.svg" alt="Icon" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
+                    </div>
+                    <div class="navText point d-none d-lg-block px-1" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Search</div>
+                </div>
+                <img class="logo" src="./assets/logo.png" alt="" srcset="">
+                <div class="d-flex navRight justify-content-center">
+                    <div class="d-flex justify-content-evenly">
+                        <div class="icon px-1">
+                            <img class="pb-1" src="./assets/account.svg" alt="Account Icon">
+                        </div>
+                        <div class="navText d-none d-lg-block px-1">Account</div>
+                    </div>
+                    <div class="d-flex justify-content-evenly px-2">
+                        <div class="icon px-1">
+                            <img src="./assets/cart.svg" alt="Account Icon">
+                        </div>
+                        <div class="navText d-none d-lg-block px-1">Cart</div>
+                    </div>
+                    <button class="navbar-toggler custom-toggler d-block d-lg-none p-0 noBoder" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <div class="nav-link active" aria-current="page">Home</div>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="nav-link">Hair</div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <div class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Boby
+                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item">Hand</a></li>
+                                        <li><a class="dropdown-item">Hand</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item">Leg</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="d-flex d-none d-lg-block justify-content-center container">
+            <div class="divHor"></div>
+        </div>
+    </div>
+    <nav class="navbar d-none d-lg-block navbar-expand-lg p-3">
+        <div class="container-fluid">
+            <!-- <a>Navbar</a> -->
+            <button class="navbar-toggler noBoder" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <div class="nav-link active" aria-current="page">Home</div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-link">Hair</div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Boby
+                            </div>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item">Hand</a></li>
+                                <li><a class="dropdown-item">Hand</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item">Leg</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav [ngClass]="{'test': !navbarHidden, 'hide': navbarHidden}" class="navbar navbar-expand-lg p-3">
+        <div class="container-fluid d-flex justify-content-between">
+            <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <div class="nav-link active" aria-current="page">Hoome</div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link">Hair</div>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Boby
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item">Hand</a></li>
+                        <li><a class="dropdown-item">Hand</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item">Leg</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-icon">
+                <div class="d-flex justify-content-evenly">
+                    <div class="icon px-1">
+                        <img class="pb-1" src="./assets/search.svg" alt="Account Icon">
+                    </div>
+                    <div class="icon px-1">
+                        <img src="./assets/cart.svg" alt="Account Icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop"
+        aria-labelledby="offcanvasWithBackdropLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Offcanvas with backdrop</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>.....</p>
+        </div>
+    </div>
+</div>
