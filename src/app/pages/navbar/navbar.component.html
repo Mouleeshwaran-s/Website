@@ -231,7 +231,8 @@
             <div class="nav-icon">
                 <div class="d-flex justify-content-evenly">
                     <div class="icon px-1">
-                        <img class="pb-1" src="./assets/search.svg" alt="Account Icon">
+                        <img class="pb-1" src="./assets/search.svg" alt="Account Icon" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
                     </div>
                     <div class="icon px-1">
                         <img src="./assets/cart.svg" alt="Account Icon">
@@ -243,11 +244,11 @@
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop"
         aria-labelledby="offcanvasWithBackdropLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Offcanvas with backdrop</h5>
+            <h5 class="offcanvas-title" routerLink="/search" id="offcanvasWithBackdropLabel">Search</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <p>.....</p>
+          <input type="text" class="form-control" id="search" aria-describedby="search" placeholder="Type here to search" [(ngModel)]="search" (keyup)="searchProduct()">
         </div>
     </div>
 </div>

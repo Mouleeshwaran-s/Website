@@ -1,6 +1,6 @@
-<div class="footer p-5">
+<div class="footer">
   <div class="container">
-    <div class="row">
+    <div class="row p-2 p-lg-5">
       <div class="col-lg">
         <img class="logo" src="./assets/logo.png" alt="" srcset="">
       </div>
@@ -35,5 +35,22 @@
         </ul>
       </div>
     </div>
+    <div class="d-flex d-none d-lg-block justify-content-center container">
+      <div class="divHor"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg">
+        <p>© 2022 All rights reserved</p>
+      </div>
+      <div class="col-lg">
+        <ul class="d-flex justify-content-end">
+          <li><i class="fab fa-facebook-f"></i></li>
+          <li><i class="fab fa-twitter"></i></li>
+          <li><i class="fab fa-instagram"></i></li>
+          <li><i class="fab fa-linkedin-in"></i></li>
+        </ul>
+      </div>
+    </div>
   </div>
+  <button *ngIf="isButtonVisible" class="scroll-to-top" (click)="scrollToTop()">Top</button>
 </div>

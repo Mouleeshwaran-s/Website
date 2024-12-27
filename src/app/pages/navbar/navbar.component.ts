@@ -1,9 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { LoaderService } from '../../services/loader.service';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule,RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
@@ -11,6 +14,8 @@ export class NavbarComponent implements OnInit {
   previousScrollPosition = 0;
   navbarHidden = false;
   mbNav = false;
+  search : any = '';
+  constructor(private loaderService: LoaderService) {}
   ngOnInit() {
     this.previousScrollPosition = window.pageYOffset;
     this.onWindowScroll();
@@ -83,5 +88,12 @@ export class NavbarComponent implements OnInit {
     } else {
       console.error('Navbar or input bottom not found or not an HTMLElement');
     }
+  }
+  searchProduct(): void {
+    this.loaderService.show();
+    console.log('Search: ', this.search);
+    setTimeout(() => {
+    this.loaderService.hide();
+    }, 5000);
   }
 }

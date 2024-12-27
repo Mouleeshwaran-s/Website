@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Assistant';
+  src: url('/public/assets/Assistant/static/Assistant-ExtraLight.ttf') format('truetype');
+}
+.container-fluid::-webkit-scrollbar {
+  display: none; /* For Webkit-based browsers (Chrome, Safari, etc.) */
+}
+
+.container-fluid {
+  scrollbar-width: none; /* For Firefox */
+}
 .scrollhide {
   overflow: hidden;
   scroll-behavior: smooth;
@@ -9,8 +20,11 @@
 .scrollhide::-webkit-scrollbar {
   display: none;
 }
-* {
-  font-family: Assistant, sans-serif;
+p, h1, h3, li, span {
+  font-weight: 200 !important;
+}
+*{
+  scroll-behavior: smooth;
 }
 .noBoder {
   border: 0px !important;
@@ -18,9 +32,9 @@
 }
 .divHor {
   width: 100%;
-  height: 0.3px;
+  height: 1px;
   background-color: #F0EBCE;
-}
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;}
 
 @keyframes marquee {
   0% {
@@ -85,6 +99,17 @@ p.marquee{
 .main {
   background-color: #F0EBCE !important;
   color: #4E6C50 !important;
+}
+input {
+  background-color: #F0EBCE !important;
+  color: #4E6C50 !important;
+  border: 1px solid #4E6C50 !important;
+  border-radius: 5px !important;
+  outline: none !important;
+}
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 h2{
   font-size: 17px !important;
