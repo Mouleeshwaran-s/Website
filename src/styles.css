@@ -2,6 +2,10 @@
   font-family: 'Assistant';
   src: url('/public/assets/Assistant/static/Assistant-ExtraLight.ttf') format('truetype');
 }
+body::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
 .container-fluid::-webkit-scrollbar {
   display: none; /* For Webkit-based browsers (Chrome, Safari, etc.) */
 }
@@ -33,7 +37,7 @@ p, h1, h3, li, span {
 .divHor {
   width: 100%;
   height: 1px;
-  background-color: #F0EBCE;
+  background-color: #FFFFFF;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;}
 
 @keyframes marquee {
@@ -74,7 +78,7 @@ p.marquee{
   border-radius: 50px;
 }
 .svgcolor{
-  color: #F0EBCE;
+  color: #FFFFFF;
 }
 .point{
   cursor: pointer;
@@ -89,7 +93,7 @@ p.marquee{
   bottom: 0;
   left: 0;
   width: 0%;
-  border-bottom: 1px solid #F0EBCE;
+  border-bottom: 1px solid #FFFFFF;
   transition: width 0.3s ease;
 }
 
@@ -97,13 +101,13 @@ p.marquee{
   width: 100%;
 }
 .main {
-  background-color: #F0EBCE !important;
-  color: #4E6C50 !important;
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
 }
 input {
-  background-color: #F0EBCE !important;
-  color: #4E6C50 !important;
-  border: 1px solid #4E6C50 !important;
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border: 1px solid rgba(156, 49, 49, 0.3) !important;
   border-radius: 5px !important;
   outline: none !important;
 }
@@ -118,4 +122,12 @@ h2{
 li{
   font-size: 17px !important;
   font-weight: 400;
+}
+.offcanvas-header{
+  border-bottom: 1px solid rgba(156, 49, 49, 0.1);
+  text-transform: uppercase;
+}
+.badge{
+  color: #000000 !important;
+  background-color: #FFFFFF !important;
 }

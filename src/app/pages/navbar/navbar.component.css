@@ -29,15 +29,15 @@
 .navbar-nav,
 .nav-link,
 .ffcanvas-body {
-  color: #F0EBCE !important;
-  background-color: #4E6C50 !important;
+  color: #FFFFFF !important;
+  background-color: #EB1414 !important;
 }
 .custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(240, 235, 206)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 .offcanvas {
-  background-color: #f0ebce !important;
-  color: #609966;
+  background-color: #FFFFFF !important;
+  color: #000000;
 }
 @media (max-width: 576px) {
   .offcanvas {
@@ -76,7 +76,7 @@
   -webkit-align-items: center;
   align-items: center;
   overflow: hidden;
-  background: #aa8b56;
+  background: #8C0000;
 }
 .marquee-text .top-info-bar {
   font-size: 12px;
@@ -108,7 +108,7 @@
 }
 
 .marquee-text .top-info-bar a {
-  color: #f0ebce;
+  color: #FFFFFF;
   text-decoration: none;
 }
 

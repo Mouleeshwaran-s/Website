@@ -2,6 +2,7 @@
   "name": "website",
   "version": "0.0.0",
   "scripts": {
+    "devdeploy": "ng build --output-path docs --base-href /Website/ && node scripts/deploy.js",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

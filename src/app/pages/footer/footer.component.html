@@ -52,5 +52,11 @@
       </div>
     </div>
   </div>
-  <button *ngIf="isButtonVisible" class="scroll-to-top" (click)="scrollToTop()">Top</button>
+  <button *ngIf="isButtonVisible" class="scroll-to-top py-1 px-2" (click)="scrollToTop()">
+    <span class="main-go-top__icon d-block">
+      <img src="./assets/up.svg" alt="Top" />
+    </span>
+    <span class="main-go-top__text d-block opacity-100">TOP</span>
+  </button>
+  
 </div>
