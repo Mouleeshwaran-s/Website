@@ -1,6 +1,12 @@
+@import "primeicons/primeicons.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @font-face {
-  font-family: 'Assistant';
-  src: url('/public/assets/Assistant/static/Assistant-ExtraLight.ttf') format('truetype');
+  font-family: "Lora";
+  src: url("../public/assets/Assistant/static/Assistant-ExtraLight.ttf")
+    format("truetype");
+  /* src: url('../public/assets/font/Lora/static/Lora-Regular.ttf') format('truetype'); */
 }
 body::-webkit-scrollbar {
   display: none;
@@ -9,7 +15,6 @@ body::-webkit-scrollbar {
 .container-fluid::-webkit-scrollbar {
   display: none; /* For Webkit-based browsers (Chrome, Safari, etc.) */
 }
-
 .container-fluid {
   scrollbar-width: none; /* For Firefox */
 }
@@ -24,10 +29,14 @@ body::-webkit-scrollbar {
 .scrollhide::-webkit-scrollbar {
   display: none;
 }
-p, h1, h3, li, span {
+p,
+h1,
+h3,
+li,
+span {
   font-weight: 200 !important;
 }
-*{
+* {
   scroll-behavior: smooth;
 }
 .noBoder {
@@ -37,8 +46,10 @@ p, h1, h3, li, span {
 .divHor {
   width: 100%;
   height: 1px;
-  background-color: #FFFFFF;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;}
+  background-color: #ffffff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
 
 @keyframes marquee {
   0% {
@@ -58,7 +69,7 @@ p, h1, h3, li, span {
   }
 }
 .marquee {
-    width: 100%;
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   animation: marquee 12s linear infinite;
@@ -69,18 +80,18 @@ p, h1, h3, li, span {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
-p.marquee{
-    margin: 0px;
+p.marquee {
+  margin: 0px;
 }
-.logo{
+.logo {
   width: 100px;
   height: 100px;
   border-radius: 50px;
 }
-.svgcolor{
-  color: #FFFFFF;
+.svgcolor {
+  color: #ffffff;
 }
-.point{
+.point {
   cursor: pointer;
 }
 .navText {
@@ -93,7 +104,7 @@ p.marquee{
   bottom: 0;
   left: 0;
   width: 0%;
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 1px solid #ffffff;
   transition: width 0.3s ease;
 }
 
@@ -101,11 +112,12 @@ p.marquee{
   width: 100%;
 }
 .main {
-  background-color: #FFFFFF !important;
+  background-color: #ffffff !important;
   color: #000000 !important;
+  font-family: "Lora" !important;
 }
 input {
-  background-color: #FFFFFF !important;
+  background-color: #ffffff !important;
   color: #000000 !important;
   border: 1px solid rgba(156, 49, 49, 0.3) !important;
   border-radius: 5px !important;
@@ -115,19 +127,19 @@ input:focus {
   outline: none !important;
   box-shadow: none !important;
 }
-h2{
+h2 {
   font-size: 17px !important;
   font-weight: 600;
 }
-li{
+li {
   font-size: 17px !important;
   font-weight: 400;
 }
-.offcanvas-header{
+.offcanvas-header {
   border-bottom: 1px solid rgba(156, 49, 49, 0.1);
   text-transform: uppercase;
 }
-.badge{
+.badge {
   color: #000000 !important;
-  background-color: #FFFFFF !important;
+  background-color: #ffffff !important;
 }

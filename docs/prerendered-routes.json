@@ -1,6 +1,8 @@
 {
-  "routes": [
-    "/home",
-    "/search"
-  ]
+  "routes": {
+    "/Website": {},
+    "/Website/collections": {},
+    "/Website/home": {},
+    "/Website/search": {}
+  }
 }

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Website": {
+    "website": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -34,9 +34,9 @@
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ],
             "server": "src/main.server.ts",
-            "prerender": true,
+            "outputMode": "server",
             "ssr": {
-              "entry": "server.ts"
+              "entry": "src/server.ts"
             }
           },
           "configurations": {
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Website:build:production"
+              "buildTarget": "website:build:production"
             },
             "development": {
-              "buildTarget": "Website:build:development"
+              "buildTarget": "website:build:development"
             }
           },
           "defaultConfiguration": "development"
