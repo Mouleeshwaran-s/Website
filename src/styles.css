@@ -111,9 +111,12 @@ p.marquee {
 .navText:hover::after {
   width: 100%;
 }
-.main {
+.main{
   background-color: #ffffff !important;
   color: #000000 !important;
+  font-family: "Lora" !important;
+}
+.main, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl,.container {
   font-family: "Lora" !important;
 }
 input {
@@ -143,3 +146,12 @@ li {
   color: #000000 !important;
   background-color: #ffffff !important;
 }
+.row, .col{
+  /* border: 1px solid #000000; */
+}
+.p-select-list-container {
+  /* overflow: hidden; */
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

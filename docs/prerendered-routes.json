@@ -1,8 +1,3 @@
 {
-  "routes": {
-    "/Website": {},
-    "/Website/collections": {},
-    "/Website/home": {},
-    "/Website/search": {}
-  }
+  "routes": {}
 }
