@@ -3,11 +3,44 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-  font-family: "Lora";
-  src: url("../public/assets/Assistant/static/Assistant-ExtraLight.ttf")
+  font-family: "Inter";
+  src: url(../public/assets/font/Inter/Inter-VariableFont.ttf)
     format("truetype");
-  /* src: url('../public/assets/font/Lora/static/Lora-Regular.ttf') format('truetype'); */
 }
+/* Global View Transition Styles */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.8s; /* Smooth effect duration */
+}
+
+/* Outgoing Page Effect */
+::view-transition-old(root) {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+  filter: blur(0px);
+}
+
+::view-transition-old(root) {
+  opacity: 0;
+  transform: scale(1.1) translateX(-50px);
+  filter: blur(10px);
+  animation-fill-mode: forwards;
+}
+
+/* Incoming Page Effect */
+::view-transition-new(root) {
+  opacity: 0;
+  transform: scale(0.95) translateX(50px);
+  filter: blur(10px);
+}
+
+::view-transition-new(root) {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+  filter: blur(0px);
+  animation-fill-mode: forwards;
+}
+
 body::-webkit-scrollbar {
   display: none;
   scroll-behavior: smooth;
@@ -114,10 +147,10 @@ p.marquee {
 .main{
   background-color: #ffffff !important;
   color: #000000 !important;
-  font-family: "Lora" !important;
+  font-family: "Inter" !important;
 }
 .main, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl,.container {
-  font-family: "Lora" !important;
+  font-family: "Inter" !important;
 }
 input {
   background-color: #ffffff !important;
@@ -146,12 +179,5 @@ li {
   color: #000000 !important;
   background-color: #ffffff !important;
 }
-.row, .col{
-  /* border: 1px solid #000000; */
-}
-.p-select-list-container {
-  /* overflow: hidden; */
-}
-
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

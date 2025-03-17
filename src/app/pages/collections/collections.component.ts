@@ -56,11 +56,8 @@ export class CollectionsComponent implements OnInit {
       { name: 'Date, new to old', code: 'created-descending' }
     ];
     this.items = [
-      { label: 'Electronics' },
-      { label: 'Computer' },
-      { label: 'Accessories' },
-      { label: 'Keyboard' },
-      { label: 'Wireless' }
+      { label: 'Collections' },
+      { label: this.collection.collection_name },
     ];
     this.home = { icon: 'pi pi-home', routerLink: '/' };
   }
