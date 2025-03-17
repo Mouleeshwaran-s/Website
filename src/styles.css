@@ -181,3 +181,26 @@ li {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+html {
+  scroll-behavior: auto; /* Disable default smooth scrolling */
+  overflow: hidden; /* Prevent browser's native scrolling */
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.section:nth-child(odd) {
+  background: #1e1e1e;
+}
+
+.section:nth-child(even) {
+  background: #3a3a3a;
+}
