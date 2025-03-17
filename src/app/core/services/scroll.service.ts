@@ -10,7 +10,7 @@ export class ScrollService {
 
   constructor(
     private ngZone: NgZone,
-    @Inject(PLATFORM_ID) private platformId: Object // Detect if running in browser
+    @Inject(PLATFORM_ID) private platformId: Object // Check if running in browser
   ) {
     if (isPlatformBrowser(this.platformId)) {
       this.initSmoothScroll();
@@ -31,6 +31,11 @@ export class ScrollService {
         requestAnimationFrame(raf);
       };
       requestAnimationFrame(raf);
+
+      // Listen for scroll updates
+      this.lenis.on('scroll', () => {
+        console.log('Scrolling...');
+      });
     });
   }
 }

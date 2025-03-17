@@ -1,3 +1,4 @@
+@import 'lenis/dist/lenis.css';
 @import "primeicons/primeicons.css";
 @tailwind base;
 @tailwind components;
@@ -203,4 +204,11 @@ html {
 
 .section:nth-child(even) {
   background: #3a3a3a;
+}
+html {
+  scroll-behavior: auto !important;
+  overflow: hidden;
+}
+body {
+  overflow: hidden;
 }
