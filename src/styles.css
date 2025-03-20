@@ -8,13 +8,11 @@
   src: url(../public/assets/font/Inter/Inter-VariableFont.ttf)
     format("truetype");
 }
-/* Global View Transition Styles */
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: 0.8s; /* Smooth effect duration */
+  animation-duration: 0.8s;
 }
 
-/* Outgoing Page Effect */
 ::view-transition-old(root) {
   opacity: 1;
   transform: scale(1) translateX(0);
@@ -28,7 +26,6 @@
   animation-fill-mode: forwards;
 }
 
-/* Incoming Page Effect */
 ::view-transition-new(root) {
   opacity: 0;
   transform: scale(0.95) translateX(50px);
@@ -42,15 +39,41 @@
   animation-fill-mode: forwards;
 }
 
+/* .wrapper {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+} */
+
+.wrapper {
+  font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+  font-size: clamp(14px, 1.2vw, 18px); /* Body text adjusts dynamically */
+  color: #666 !important;
+}
+
+h1 {
+  font-size: clamp(32px, 5vw, 56px); /* Scales between 32px (mobile) to 56px (desktop) */
+}
+
+h2 {
+  font-size: clamp(24px, 4vw, 42px);
+}
+
+small {
+  font-size: clamp(12px, 1vw, 14px);
+}
+
+
 body::-webkit-scrollbar {
   display: none;
   scroll-behavior: smooth;
 }
 .container-fluid::-webkit-scrollbar {
-  display: none; /* For Webkit-based browsers (Chrome, Safari, etc.) */
+  display: none;
 }
 .container-fluid {
-  scrollbar-width: none; /* For Firefox */
+  scrollbar-width: none;
 }
 .scrollhide {
   overflow: hidden;
@@ -62,13 +85,6 @@ body::-webkit-scrollbar {
 }
 .scrollhide::-webkit-scrollbar {
   display: none;
-}
-p,
-h1,
-h3,
-li,
-span {
-  font-weight: 200 !important;
 }
 * {
   scroll-behavior: smooth;
@@ -145,14 +161,6 @@ p.marquee {
 .navText:hover::after {
   width: 100%;
 }
-.main{
-  background-color: #ffffff !important;
-  color: #000000 !important;
-  font-family: "Inter" !important;
-}
-.main, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl,.container {
-  font-family: "Inter" !important;
-}
 input {
   background-color: #ffffff !important;
   color: #000000 !important;
@@ -163,14 +171,6 @@ input {
 input:focus {
   outline: none !important;
   box-shadow: none !important;
-}
-h2 {
-  font-size: 17px !important;
-  font-weight: 600;
-}
-li {
-  font-size: 17px !important;
-  font-weight: 400;
 }
 .offcanvas-header {
   border-bottom: 1px solid rgba(156, 49, 49, 0.1);
@@ -185,8 +185,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 html {
-  scroll-behavior: auto; /* Disable default smooth scrolling */
-  overflow: hidden; /* Prevent browser's native scrolling */
+  scroll-behavior: auto;
+  overflow: hidden;
 }
 
 .section {

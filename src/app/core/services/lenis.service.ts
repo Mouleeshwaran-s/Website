@@ -11,13 +11,23 @@ export class LenisService {
 
   initLenis(): void {
     this.lenis = new Lenis({
-      autoRaf: false, // We'll handle RAF manually
-      smoothWheel: true, // Enables smooth scrolling for mouse wheel
-      syncTouch: true,   // Correct replacement for smoothTouch
+      autoRaf: false, // Manual RAF handling
+      smoothWheel: true,
+      syncTouch: true,
       gestureOrientation: 'vertical',
+
+      // ✅ Prevent Lenis from interfering with inputs, selects, textareas, and custom elements
+      prevent: (node) => {
+        return (
+          node.tagName === 'SELECT' ||
+          node.tagName === 'TEXTAREA' ||
+          node.tagName === 'INPUT' ||
+          node.closest('[data-lenis-prevent]') !== null
+        );
+      },
     });
 
-    // Run Lenis inside Angular's zone to ensure smooth performance
+    // ✅ Run Lenis outside Angular for better performance
     this.ngZone.runOutsideAngular(() => {
       const raf = (time: number) => {
         this.lenis.raf(time);

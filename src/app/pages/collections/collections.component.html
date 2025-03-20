@@ -1,58 +1,61 @@
-<div class="card flex justify-center">
-  <p-breadcrumb class="max-w-full" [model]="items" [home]="home" />
-</div>
-<div>{{collection.collection_name}}</div>
-<div class="container-lg my-5">
-  <div class="row row-cols-2">
-    <div class="col-3">
-      Sort by:
-    </div>
-    <div class="col-9">
-      <div>Showing 12 products</div>
-    </div>
-    <div class="col-3">
-      <div class="card flex justify-content-center">
-        <p-dropdown [options]="sortBy" [(ngModel)]="selectedOption" optionLabel="name"
-          placeholder="Select any option" />
+<div class="wrapper">
+  <div class="card flex justify-center">
+    <p-breadcrumb class="max-w-full" [model]="items" [home]="home" />
+  </div>
+  <div>{{collection.collection_name}}</div>
+  <div class="container-lg my-5">
+    <div class="row row-cols-2">
+      <div class="col-3">
+        Sort by:
       </div>
-      <div>Availability</div>
-      <div class="flex flex-col">
-        <div *ngFor="let category of categories" class="flex items-center">
-          <p-checkbox [inputId]="category.key" name="group" [value]="category" [(ngModel)]="selectedCategories" />
-          <label [for]="category.key" class="ml-2"> {{ category.name }} </label>
+      <div class="col-9">
+        <div>Showing 12 products</div>
+      </div>
+      <div class="col-3">
+        <div class="card flex justify-content-center">
+          <p-dropdown data-lenis-prevent [options]="sortBy" [(ngModel)]="selectedOption" optionLabel="name"
+            placeholder="Select any option" />
         </div>
-      </div>
-      <div>Price</div>
-        <div class="container">
-          <div class="row" style="display: flex; align-items: center; justify-content: center;">
-            <div class="col-5 p-0" style="display: flex; align-items: center; justify-content: center;">
-              <p-iconField iconPosition="left">
-                <p-inputIcon styleClass="pi pi-indian-rupee" />
-                <input type="text" class="w-full" style="text-align:right;" [(ngModel)]="rangeValues[0]" pInputText
-                  placeholder="" />
-              </p-iconField>
-            </div>
-            <div class="col-2 p-0" style="display: flex; align-items: center; justify-content: center;">
-              to
-            </div>
-            <div class="col-5 p-0" style="display: flex; align-items: center; justify-content: center;">
-              <p-iconField iconPosition="left">
-                <p-inputIcon styleClass="pi pi-indian-rupee" />
-                <input type="text" class="w-full" style="text-align:right;" [(ngModel)]="rangeValues[1]" pInputText
-                  placeholder="" />
-              </p-iconField>
-            </div>
+        <div>Availability</div>
+        <div class="flex flex-col">
+          <div *ngFor="let category of categories" class="flex items-center">
+            <p-checkbox [inputId]="category.key" name="group" [value]="category" [(ngModel)]="selectedCategories" />
+            <label [for]="category.key" class="ml-2"> {{ category.name }} </label>
           </div>
         </div>
-      <p-slider class="mt-3" [(ngModel)]="rangeValues" [range]="true" [max]="max" styleClass="w-full" />
-    </div>
-    <div class="col-9">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-        <div class="col">Column</div>
-        <div class="col">Column</div>
-        <div class="col">Column</div>
-        <div class="col">Column</div>
+        <div>Price</div>
+          <div class="container">
+            <div class="row" style="display: flex; align-items: center; justify-content: center;">
+              <div class="col-5 p-0" style="display: flex; align-items: center; justify-content: center;">
+                <p-iconField iconPosition="left">
+                  <p-inputIcon styleClass="pi pi-indian-rupee" />
+                  <input type="text" class="w-full" style="text-align:right;" [(ngModel)]="rangeValues[0]" pInputText
+                    placeholder="" />
+                </p-iconField>
+              </div>
+              <div class="col-2 p-0" style="display: flex; align-items: center; justify-content: center;">
+                to
+              </div>
+              <div class="col-5 p-0" style="display: flex; align-items: center; justify-content: center;">
+                <p-iconField iconPosition="left">
+                  <p-inputIcon styleClass="pi pi-indian-rupee" />
+                  <input type="text" class="w-full" style="text-align:right;" [(ngModel)]="rangeValues[1]" pInputText
+                    placeholder="" />
+                </p-iconField>
+              </div>
+            </div>
+          </div>
+        <p-slider class="mt-3" [(ngModel)]="rangeValues" [range]="true" [max]="max" styleClass="w-full" />
+      </div>
+      <div class="col-9">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+          <div class="col">Column</div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
+        </div>
       </div>
     </div>
   </div>
+
 </div>
