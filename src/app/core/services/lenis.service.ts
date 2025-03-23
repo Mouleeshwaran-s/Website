@@ -10,6 +10,7 @@ export class LenisService {
   constructor(private ngZone: NgZone) {}
 
   initLenis(): void {
+    if (typeof window !== 'undefined') {
     this.lenis = new Lenis({
       autoRaf: false, // Manual RAF handling
       smoothWheel: true,
@@ -35,6 +36,7 @@ export class LenisService {
       };
       requestAnimationFrame(raf);
     });
+  }
   }
 
   getLenisInstance(): Lenis {

@@ -39,29 +39,118 @@
   animation-fill-mode: forwards;
 }
 
-/* .wrapper {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 1rem;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-} */
+:root {
+  --h1-font-size: 16px;
+  --h2-font-size: 24px;
+  --p-font-size: 16px;
+  --small-font-size: 16px;
+}
 
+
+/* Default font size (mobile-first approach) */
 .wrapper {
-  font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
-  font-size: clamp(14px, 1.2vw, 18px); /* Body text adjusts dynamically */
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important; /* Default for mobile */
   color: #666 !important;
 }
 
 h1 {
-  font-size: clamp(32px, 5vw, 56px); /* Scales between 32px (mobile) to 56px (desktop) */
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important; /* Default for mobile */
+  color: #000000 !important;
+  font-weight: 700 !important;
 }
 
 h2 {
-  font-size: clamp(24px, 4vw, 42px);
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important; /* Default for mobile */
+  color: #000000 !important;
+  font-weight: 500 !important;
+}
+
+p {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important; /* Default for mobile */
+  color: #000000 !important;
 }
 
 small {
-  font-size: clamp(12px, 1vw, 14px);
+  font-family: 'Inter', sans-serif !important;
+  font-size: 8px !important; /* Default for mobile */
+  color: #000000 !important;
+}
+
+/* Tablet (between 600px and 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .wrapper {
+    font-size: 13px !important;
+  }
+
+  h1 {
+    font-size: 15px !important;
+  }
+
+  h2 {
+    font-size: 15px !important;
+  }
+
+  p {
+    font-size: 13px !important;
+  }
+
+  small {
+    font-size: 9px !important;
+  }
+}
+
+/* Desktop (1024px and above) */
+@media (min-width: 1024px) {
+  .wrapper {
+    font-size: 14px !important;
+  }
+
+  h1 {
+    font-size: 16px !important;
+  }
+
+  h2 {
+    font-size: 16px !important;
+  }
+
+  p {
+    font-size: 14px !important;
+  }
+
+  small {
+    font-size: 10px !important;
+  }
+}
+
+
+
+
+.wrapper {
+  font-family: 'Inter', sans-serif !important;
+  color: #666 !important;
+}
+
+h1 {
+  font-family: 'Inter', sans-serif !important;
+font-weight: 700 !important;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 500 !important;
+}
+p {
+  font-family: 'Inter', sans-serif !important;
+}
+
+small {
+  font-family: 'Inter', sans-serif !important;
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
 }
 
 

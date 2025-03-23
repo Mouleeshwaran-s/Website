@@ -1,0 +1,64 @@
+.wrapper {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 570vh; /* Adjusted for scrolling */
+  color: aquamarine !important;
+  background-color: black;
+}
+
+.box {
+  width: 65vh;
+  height: 65vh;
+  background-color: rgb(76, 81, 79);
+  border: 1px solid rgb(255, 255, 255);
+  padding: 10px;
+  position: relative;
+}
+
+.ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: rgb(177, 69, 69);
+  animation: glow 1.5s infinite;
+  transition: left 0.1s ease; /* Smooth movement */
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px 0px rgb(177, 69, 69);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgb(177, 69, 69);
+    transform: scale(1.5);
+  }
+  100% {
+    box-shadow: 0 0 10px 0px rgb(177, 69, 69);
+    transform: scale(1);
+  }
+}
+/* text-reveal.component.css */
+.text-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 200px; /* Adjust based on your content */
+}
+
+.reveal-text {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.reveal-text.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}

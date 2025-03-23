@@ -1,3 +1,18 @@
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .marquee-text .top-info-bar .info-text {
+    padding: 8px 25px !important;
+}
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .marquee-text .top-info-bar .info-text {
+    padding: 8px 25px !important;
+  }
+}
+
 .test {
   display: block;
   position: fixed;
@@ -76,7 +91,7 @@
   -webkit-align-items: center;
   align-items: center;
   overflow: hidden;
-  background: #8C0000;
+  background: #aa0e0e;
 }
 .marquee-text .top-info-bar {
   font-size: 12px;

@@ -24,8 +24,8 @@ export default {
   }
 ],
   assets: {
-    'index.csr.html': {size: 13970, hash: 'a72bec4e81fec5fb34ffb6d02d6ab363b185bc2954a08a45afa6beb3130c00b8', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 1250, hash: 'a05246c2e4b714f25cba0a52049b49838de699521191bbdddcf3a4cf48926f10', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'styles-NUO4MMUP.css': {size: 259799, hash: 'JUNRdA9AYLk', text: () => import('./assets-chunks/styles-NUO4MMUP_css.mjs').then(m => m.default)}
+    'index.csr.html': {size: 14058, hash: '0a669f0c9edc704085174da841bdf9560f568ec43f7b617d137eea02af5644a1', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 1250, hash: '67b482ccb3e005b471486cdfccdd4fa747a32f816da9341f2f1251528857e19b', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'styles-WF3XSWFJ.css': {size: 260863, hash: 'Gy01uMQ2UIk', text: () => import('./assets-chunks/styles-WF3XSWFJ_css.mjs').then(m => m.default)}
   },
 };

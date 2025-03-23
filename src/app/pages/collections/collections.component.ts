@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { Breadcrumb } from 'primeng/breadcrumb';
 import { ProductService } from '../../services/productservice';
@@ -43,6 +43,7 @@ export class CollectionsComponent implements OnInit {
   rangeValues: number[] = [0, 1000];
   max: number = 1000;
   ngOnInit() {
+    this.updateBallPosition();
     this.collection = JSON.parse(sessionStorage.getItem('collection')!);
     this.selectedCategories = [this.categories[1]];
     this.sortBy = [
@@ -63,5 +64,36 @@ export class CollectionsComponent implements OnInit {
   }
   getvalue(){
 
+  }
+  scrollPercentage = 0;
+  ballPosition!: number;
+  windowHeight!: number;
+
+  // Listen to the window scroll event
+  @HostListener('window:scroll', [])
+  onScroll() {
+    this.updateBallPosition();
+  }
+
+  updateBallPosition() {
+    const ball = document.querySelector('.ball') as HTMLElement;
+    if (ball) {
+      const box = document.querySelector('.box') as HTMLElement;
+      const boxWidth = box.clientWidth;
+
+      // Get the ball's current vertical position relative to the viewport
+      this.ballPosition = ball.getBoundingClientRect().top;
+      this.windowHeight = window.innerHeight;
+      this.scrollPercentage =100-((this.ballPosition / this.windowHeight) * 100 );
+
+      // Calculate the horizontal position of the ball based on scroll percentage
+      const ballMovementRange = boxWidth - ball.offsetWidth;  // Horizontal distance the ball can move
+      const ballPositionX = (this.scrollPercentage / 100) * ballMovementRange;
+
+      // Ensure the ball moves only within the boundaries of the box
+      if (this.scrollPercentage >= 0 && this.scrollPercentage <= 100) {
+        ball.style.left = `${ballPositionX}px`;
+      }
+    }
   }
 }
